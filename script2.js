@@ -1,15 +1,16 @@
 ///////////////////////////////////////////////////------------1 chunk
 const arr3 = ['a', 'b', 'c', 'd'];
 
-const chunk = (arr, a) => {
-    const result = [];
-    const res1 = arr.slice(0, a);
-    const res2 = arr.slice(a);
-    result.push(res1, res2);
+const chunk = (arr, size) => {
+    let result = [];
+    for(let i=0; i < arr.length; i += size) {
+    let res1 = arr.slice(i, i + size);
+    result.push(res1);
+    }
     return result
 }
 
-console.log(chunk(arr3, 2))
+console.log(chunk(arr3, 4))
 
 ////////////////////////////////////////////////////------------2 initial
 
