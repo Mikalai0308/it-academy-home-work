@@ -2,9 +2,9 @@
 const arr3 = ['a', 'b', 'c', 'd'];
 
 const chunk = (arr, size) => {
-    let result = [];
+    const result = [];
     for(let i=0; i < arr.length; i += size) {
-    let res1 = arr.slice(i, i + size);
+    const res1 = arr.slice(i, i + size);
     result.push(res1);
     }
     return result
